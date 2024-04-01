@@ -2,7 +2,8 @@
  * Title: app.module.ts
  * Author: Victor Soto
  * Date: 03/31/2024
- * Description: App module
+ * Description: App Module
+ * Source: https://github.com/buwebdev/web-425
  */
 
 import { BrowserModule } from '@angular/platform-browser';

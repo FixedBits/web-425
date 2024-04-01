@@ -3,11 +3,12 @@
  * Author: Victor Soto
  * Date:   03/31/2024
  * Description: Composer list component; displays a list of composers
+ * Source: https://github.com/buwebdev/web-425
  */
 
 import { Component, OnInit } from '@angular/core';
 
-class MusicComposer {
+export default class Composer {
   fullName: string;
   genre: string;
 
@@ -23,15 +24,15 @@ class MusicComposer {
   styleUrls: ['./composer-list.component.css'],
 })
 export class ComposerListComponent implements OnInit {
-  composers: Array<MusicComposer>;
+  composers: Array<Composer>;
 
   constructor() {
     this.composers = [
-      new MusicComposer('Franz Schubert', 'Classical'),
-      new MusicComposer('Richard Wagner', 'Classical'),
-      new MusicComposer('Antonio Vivaldi', 'Classical'),
-      new MusicComposer('Franz Joseph Haydn', 'Classical'),
-      new MusicComposer('George Frideric Handel', 'Classical'),
+      new Composer('Ludwig van Beethoven', 'Classical'),
+      new Composer('Johann Sebastian Bach', 'Classical'),
+      new Composer('Wolfgang Amadeus Mozart', 'Classical'),
+      new Composer('Johannes Brahms', 'Classical'),
+      new Composer('Joseph Haydn', 'Classical'),
     ];
   }
 

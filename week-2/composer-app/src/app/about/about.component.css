@@ -1,12 +1,15 @@
-.apa-reference {
-  font-weight: lighter;
-  font-style: italic;
-}
-
-.align-center {
-  text-align: center;
-}
-
 .composer-container {
   padding-top: 50px;
+}
+
+.about-composer {
+  display: flex;
+  /* Used flexbox for side-by-side layout */
+}
+
+.about-composer img {
+  max-width: 100%;
+  /* Ensured image scales down if necessary */
+  margin-right: 20px;
+  /* Added some spacing between image and text */
 }
