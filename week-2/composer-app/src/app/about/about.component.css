@@ -2,14 +2,7 @@
   padding-top: 50px;
 }
 
-.about-composer {
-  display: flex;
-  /* Used flexbox for side-by-side layout */
-}
-
 .about-composer img {
-  max-width: 100%;
+  max-width: 80%;
   /* Ensured image scales down if necessary */
-  margin-right: 20px;
-  /* Added some spacing between image and text */
 }
