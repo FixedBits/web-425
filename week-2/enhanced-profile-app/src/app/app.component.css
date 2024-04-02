@@ -1,0 +1,25 @@
+/* Styles for Navbar */
+.navbar {
+  background-color: #f8f9fa;
+}
+
+.navbar .nav-link {
+  color: #495057;
+}
+
+/* Styles for Main Container */
+.container {
+  margin-top: 20px;
+}
+
+/* Styles for Profile Image */
+app-my-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+/* Styles for Profile Details */
+app-my-details {
+  padding: 20px;
+}
