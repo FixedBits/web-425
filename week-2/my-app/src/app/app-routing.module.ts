@@ -7,24 +7,24 @@ import { AboutComponent } from './about/about.component';
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: HomeComponent,
   },
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
   },
   {
     path: 'contact',
-    component: ContactComponent
+    component: ContactComponent,
   },
   {
     path: 'about',
-    component: AboutComponent
+    component: AboutComponent,
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
