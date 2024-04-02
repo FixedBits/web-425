@@ -13,16 +13,15 @@ export default class Person {
   favoriteColor: string;
   keywords = [
     '#TypeScript', "#2024", "#CodingWithAngular", "#ngOmaha"
-  ];
+  ]
 
   constructor(fullName: string, favoriteFood: string, favoriteColor: string) {
     this.fullName = fullName;
     this.favoriteFood = favoriteFood;
     this.favoriteColor = favoriteColor;
   }
-
-  
 }
+
 
 @Component({
   selector: 'app-my-details',
@@ -30,7 +29,13 @@ export default class Person {
   styleUrls: ['./my-details.component.css'],
 })
 export class MyDetailsComponent implements OnInit {
-  constructor() {}
+
+  myProfile: Person;
+
+  constructor(){
+    this.myProfile = new Person("Victor Soto", "Fried Rice", "Red");
+
+  }
 
   ngOnInit(): void {}
 }
