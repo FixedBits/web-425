@@ -2,7 +2,7 @@
  * Title: app.routing.ts
  * Author: Victor Soto
  * Date: 04/07/2024
- * Description: App module
+ * Description: App routing
  * Source: https://github.com/buwebdev/web-425/blob/master/week-3/
  */
 

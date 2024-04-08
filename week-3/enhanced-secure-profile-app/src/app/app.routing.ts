@@ -2,13 +2,13 @@
  * Title: app.routing.ts
  * Author: Victor Soto
  * Date: 04/07/2024
- * Description: App module
- * Source: https://github.com/buwebdev/web-425/blob/master/week-3/
+ * Description: App routing
  */
 
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { SigninComponent } from './signin/signin.component';
+import { SignInGuard } from './sign-in.guard';
 
 export const AppRoutes: Routes = [
     {
@@ -17,6 +17,7 @@ export const AppRoutes: Routes = [
     },
     {
       path: 'home',
-      component: HomeComponent
+      component: HomeComponent,
+      canActivate: [SignInGuard]
     }
 ]

@@ -2,8 +2,7 @@
 ============================================
 ; Title: home.component.html
 ; Author: Victor Soto
-; Date: 04/07/2024
-; Source: https://github.com/buwebdev/web-425/blob/master/week-3
+; Date: 04/07/2024  
 ;===========================================
 -->
 
@@ -27,9 +26,7 @@
   <h2>Exercise 3.3 Passing Data to Routes, Part 2</h2>
 
   <br /><br />
-
-  <!-- if the isLoggedIn variable is true -->
-  <div class="row" *ngIf="isLoggedIn; else showError">
+  <div class="row">
     <div class="col-sm-4">
       <app-my-image></app-my-image>
     </div>
@@ -37,13 +34,4 @@
       <app-my-details></app-my-details>
     </div>
   </div>
-
-  <!-- else -->
-  <ng-template #showError>
-    <div class="row">
-      <div class="col-sm-12">
-        <h4 class="alert alert-danger">You are not authorized to view this content</h4>
-      </div>
-    </div>
-  </ng-template>
 </div>
