@@ -1,3 +1,10 @@
+ /**
+ * Title: sign-in.guard.ts
+ * Author: Victor Soto
+ * Date:  04/07/2024
+ * Description: guard for signin
+ */
+
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
