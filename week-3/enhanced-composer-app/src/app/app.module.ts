@@ -14,6 +14,8 @@ import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { ComposerListComponent } from './composer-list/composer-list.component';
+import { ComposerDetailsComponent } from './composer-details/composer-details.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -21,8 +23,9 @@ import { ComposerListComponent } from './composer-list/composer-list.component';
     ContactComponent,
     AboutComponent,
     ComposerListComponent,
+    ComposerDetailsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, RouterModule],
   providers: [],
   bootstrap: [AppComponent],
 })
