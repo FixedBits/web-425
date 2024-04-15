@@ -1,0 +1,19 @@
+<!--
+ * Author: Victor Soto
+ * Title: composer-details.component.html
+ * Date: 04/07/2024
+ * Description: composer details page
+ * Source: https://github.com/buwebdev/web-425
+-->
+
+<div class="row">
+  <div class="col-sm-12">
+    <ul class="list-group">
+      <li class="list-group-item">Composer ID: {{ composer.composerId }}</li>
+      <li class="list-group-item">Full name: {{ composer.fullName }}</li>
+      <li class="list-group-item">Genre: {{ composer.genre }}</li>
+    </ul>
+    <br />
+    <a routerLink="/composer-list" class="float-right">Return to Composers</a>
+  </div>
+</div>

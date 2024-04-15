@@ -1,0 +1,8 @@
+.composer-container {
+  padding-top: 50px;
+}
+
+.about-composer img {
+  max-width: 80%;
+  /* Ensured image scales down if necessary */
+}
