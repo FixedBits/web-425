@@ -18,6 +18,6 @@ export class AppComponent {
   assignment: string;
 
   constructor() {
-    this.assignment = "Exercise 5.2 - Navigation and Layout";
+    this.assignment = "Exercise 5.2 - Data Tables";
   }
 }
