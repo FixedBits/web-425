@@ -22,7 +22,8 @@ import { MatListModule } from '@angular/material/list';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
-import { BookDetailsDialogComponent } from './book-details-dialog/book-details-dialog.component'; 
+import { BookDetailsDialogComponent } from './book-details-dialog/book-details-dialog.component';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { BookDetailsDialogComponent } from './book-details-dialog/book-details-d
     MatListModule,
     FlexLayoutModule,
     MatIconModule,
-    MatTableModule // And this line
+    MatDialogModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
