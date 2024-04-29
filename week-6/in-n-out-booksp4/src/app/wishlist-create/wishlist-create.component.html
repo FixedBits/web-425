@@ -1,0 +1,23 @@
+<!--
+============================================
+; Title:  wishlist-create.component.html
+; Author: Victor Soto
+; Date:   04/24/2024
+; Source: https://github.com/buwebdev/web-425/blob/master/week-6/in-n-out-booksp4
+; Description: Form for submission of items to wishlist component
+;===========================================
+-->
+
+<form fxLayout="column" class="wishlist-create-form">
+  <mat-form-field fxFlex appearance="fill">
+    <mat-label>Title</mat-label>
+    <input type="text" name="title" matInput [(ngModel)]='item.title' />
+  </mat-form-field>
+
+  <mat-form-field fxFlex appearance="fill">
+    <mat-label>Authors</mat-label>
+    <input type="text" name="authors" matInput [(ngModel)]='item.authors' />
+  </mat-form-field>
+
+  <button mat-button color="primary" (click)="addItem()">Add item</button>
+</form>
