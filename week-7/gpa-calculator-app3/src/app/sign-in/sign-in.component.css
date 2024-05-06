@@ -1,0 +1,26 @@
+
+/**
+ * Title: sign-in.component.css
+ * Author: Victor Soto
+ * Date: 05/05/2024
+ * Source: https://github.com/buwebdev/web-425/blob/master/week-6/gpa-calculator-app3/
+ * Source-2: https: //youtu.be/OFBL4bKno_s
+ * Description: Styling for sign-in
+ */
+
+.signin-container {
+  width: 35%;
+  margin: 15% auto;
+}
+
+.msg-error {
+  margin: 10px 0px;
+  padding: 12px;
+  color: #D8000C;
+  background-color: #FFD2D2;
+}
+
+.signin-container>mat-card-title,
+mat-card-subtitle {
+  text-align: center;
+}
