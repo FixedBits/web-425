@@ -1,12 +1,13 @@
 /**
  * Title: home.component.ts
  * Author: Victor Soto
- * Date: 04/28/2024
- * Description: home component
+ * Date: 05/05/2024
+ * Source: https://github.com/buwebdev/web-425/blob/master/week-7
  */
 
 import { Component, OnInit } from '@angular/core';
 import { ITranscript } from '../transcript.interface';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms'; // Add import statement for FormGroup, FormBuilder, and Validators
 
 @Component({
   selector: 'app-home',
@@ -14,21 +15,33 @@ import { ITranscript } from '../transcript.interface';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  transcriptEntry: ITranscript;
+  // Remove transcriptEntry variable
   selectableGrades: Array<string> = ['A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D', 'D-', 'F'];
   transcriptEntries: Array<ITranscript> = [];
   gpaTotal: number = 0;
+  transcriptForm: FormGroup; // Add a new variable named transcriptForm of type FormGroup
 
-  constructor() {
-    this.transcriptEntry = {} as ITranscript;
+  constructor(private fb: FormBuilder) { // Add the FormBuilder to the components constructor
+    // Remove the transcriptEntry assignment from the components constructor
   }
 
   ngOnInit(): void {
+    // Use the FormBuilder to build a new FormGroup with two FormControls: course and grade
+    this.transcriptForm = this.fb.group({
+      course: ['', Validators.required ],
+      grade: ['', Validators.required]
+    });
   }
 
-  saveEntry(): void {
-    this.transcriptEntries.push(this.transcriptEntry);
-    this.transcriptEntry = {} as ITranscript;
+  // Add a get() function named form that returns the transcriptForm controls
+  get form() { return this.transcriptForm.controls; }
+
+  // Rename the saveEntry() function to onSubmit() and add a parameter called event
+  onSubmit(event): void {
+    // Push a new object literal to the transcriptEntries array using the values captured from the form
+    this.transcriptEntries.push({ course: this.form.course.value, grade: this.form.grade.value });
+    // Use the event object to reset Validation
+    event.currentTarget.reset();
     this.calculateResults();
   }
 

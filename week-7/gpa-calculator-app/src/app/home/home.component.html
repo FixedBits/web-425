@@ -2,8 +2,8 @@
 ============================================
 ; Title:  home.component.html
 ; Author: Victor Soto
-; Date:   04/28/2024
-; Source: https://github.com/buwebdev/web-425/blob/master/week-6/gpa-calculator-app2/
+; Date:   05/05/2024
+; Source: https://github.com/buwebdev/web-425/blob/master/week-7
 ;===========================================
 -->
 
@@ -13,19 +13,22 @@
     <mat-card>
       <mat-card-title>Grade Entry</mat-card-title>
       <mat-card-content>
-        <form>
+        <!-- Add the FormGroup to the HTML form and the onSubmit() function to the ngSubmit directive -->
+        <form [formGroup]="transcriptForm" (ngSubmit)="onSubmit($event); transcriptForm.reset()">
           <mat-form-field>
             <mat-label>Course</mat-label>
-            <input matInput id="txtCourse" [(ngModel)]="transcriptEntry.course">
+            <!-- Replace the ngModel “banana in a boat” calls to formControlName entries -->
+            <input matInput id="txtCourse" formControlName="course">
           </mat-form-field>
           <mat-form-field>
             <mat-label>Grade</mat-label>
-            <mat-select [(ngModel)]="transcriptEntry.grade" name="selectGrade">
+            <mat-select formControlName="grade" name="selectGrade">
               <mat-option *ngFor="let grade of selectableGrades" [value]="grade"> {{ grade }} </mat-option>
             </mat-select>
           </mat-form-field>
+          <!-- Remove the click event from the form, change the buttons type to submit, and disable it when the form is invalid -->
+          <button mat-raised-button color="primary" id="btnSave" type="submit" [disabled]="!transcriptForm.valid">Save</button>
         </form>
-        <button mat-raised-button color="primary" id="btnSave" (click)="saveEntry()">Save</button>
       </mat-card-content>
     </mat-card>
   </div>
