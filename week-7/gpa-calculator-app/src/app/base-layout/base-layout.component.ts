@@ -2,7 +2,7 @@
  * Title: base-layout.component.ts
  * Author: Victor Soto
  * Date: 04/28/2024
- * Source: hgpa-calculator-apphttps://github.com/buwebdev/web-425/blob/master/week-7//
+ * Source: https://github.com/buwebdev/web-425/blob/master/week-6/gpa-calculator-app3/
  * Source-2: https://youtu.be/OFBL4bKno_s
  * Description: Function sign-out for client to be able to sign out of app after signing in
  */

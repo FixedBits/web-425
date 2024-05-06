@@ -2,7 +2,7 @@
  * Title: sign-in.service.ts
  * Author: Victor Soto
  * Date: 05/05/2024
- * Source: hgpa-calculator-apphttps://github.com/buwebdev/web-425/blob/master/week-7/
+ * Source: https://github.com/buwebdev/web-425/blob/master/week-6/gpa-calculator-app
  * Source-2: https://youtu.be/OFBL4bKno_s
  * Description: Adding can-activate to base-layout component
  */
