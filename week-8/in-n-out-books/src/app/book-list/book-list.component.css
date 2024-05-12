@@ -1,0 +1,31 @@
+/**
+    Title: book-list.component.css
+    Author: Victor Soto
+    Date: 05/12/2024
+    Description: book-list component css
+*/
+
+.grid-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: auto auto auto;
+  padding: 25px;
+}
+
+.grid-container__item {
+  padding: 20px;
+  font-size: 30px;
+}
+
+.grid-container__ahref {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.grid-container__ahref:hover {
+  text-decoration: underline;
+}
+
+.green {
+  color: green;
+}

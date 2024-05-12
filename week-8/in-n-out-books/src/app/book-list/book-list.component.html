@@ -1,0 +1,34 @@
+<!--
+============================================
+; Title: book-list.component.html
+; Author: Victor Soto
+; Date: 05/12/2024
+;===========================================
+-->
+
+<!-- Display spinner when books array is empty -->
+<ng-container *ngIf="books.length === 0">
+  <mat-spinner></mat-spinner>
+</ng-container>
+
+<!-- Display cards when books array has data -->
+<div class="grid-container" *ngIf="books.length > 0">
+  <h2 class="green">Top {{books.length}} Favorite Books</h2>
+
+  <ng-container *ngFor="let book of books">
+    <mat-card class="grid-container__item">
+      <mat-card-title>
+        <a class="grid-container__ahref" (click)="showBookDetails(book.isbn)">
+          {{ book.title }}
+        </a>
+      </mat-card-title>
+      <mat-card-content>
+        <mat-list>
+          <mat-list-item>ISBN: {{ book.isbn }}</mat-list-item>
+          <mat-list-item>Number of Pages: {{ book.numOfPages }}</mat-list-item>
+          <mat-list-item>Authors: {{ book.authors.join(', ') }}</mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+</div>
